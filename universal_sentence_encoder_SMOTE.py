@@ -279,7 +279,7 @@ def evaluation_matrix(actual,predicted):
 
     print(classification_report(actual,predicted))
 
-def train_event_serious_model(df1,train_valid_flag,feature_name ,event_flagname,identifier):
+def train_classification_model(df1,train_valid_flag,feature_name ,event_flagname,identifier):
     random_grid=get_random_grid()
     
     df=df1[[ train_valid_flag,feature_name ,event_flagname]]
@@ -401,4 +401,4 @@ train_valid_flag='train_valid_flag'
 identifier="identifier_v1"
 
 for event_flagname in event_flagnames:
-    train_event_serious_model(    df,train_valid_flag,feature_name ,event_flagname,identifier)
+    train_classification_model(    df,train_valid_flag,feature_name ,event_flagname,identifier)
